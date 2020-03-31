@@ -2,20 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import { Provider } from 'react-redux';
-import './index.scss';
 import * as serviceWorker from './serviceWorker';
+import store from './redux/store';
+import routes from './routes';
+import './style/index.scss';
 
-import store from './store';
-
-import Home from "./Containers/Home/Home";
-import NotFound from "./Containers/NotFound/NotFound";
 
 const routing = (
     <Provider store={store}>
         <Router>
             <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="*" component={NotFound} />
+                {routes.map(({path, component})=><Route exact path={path} component={component} />)}
             </Switch>
         </Router>
     </Provider>

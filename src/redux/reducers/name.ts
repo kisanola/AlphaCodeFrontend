@@ -1,10 +1,9 @@
-import initialState from '../store/initialState';
+import initialState from '../initialStates/name';
 import {
     CHANGE_NAME
 } from '../actionTypes';
 
-const name = (state = initialState.name, { type, payload }) => {
-
+const name = (state = initialState, { type, payload }) => {
     switch (type) {
         case CHANGE_NAME:
             return {
