@@ -35,6 +35,8 @@
 
 > **Provide the steps to manually test the functionalities implemented in this PR**
 
+#### Add the link to the to gitKraken board?
+
 #### Checklist
 
 - [ ] My code follows the style guidelines of this project
